@@ -1,0 +1,129 @@
+/* General Styling */
+.contact-container {
+  max-width: 600px; /* Default max-width */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9; 
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-container.dark {
+  background-color: #333; 
+  color: #f9f9f9;
+}
+
+/* Heading Styling */
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444; 
+}
+
+.contact-container.dark h2 {
+  color: #ddd; 
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  color: #4caf50;
+  font-size: 1.2rem;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  width: 96%;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.contact-container.dark .form-group input,
+.contact-container.dark .form-group textarea {
+  background-color: #555;
+  border-color: #777;
+  color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.contact-container.dark .form-group input:focus,
+.contact-container.dark .form-group textarea:focus {
+  border-color: #66b2ff;
+}
+
+/* Button */
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #18579b;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #007bff;
+}
+
+.contact-container.dark .submit-button {
+  background-color: #444;
+}
+
+.contact-container.dark .submit-button:hover {
+  background-color: #666;
+}
+
+/* Media Queries */
+
+/* For iPhone XR (414px width) */
+@media (max-width: 414px) {
+  .contact-container {
+    width: 90%; 
+    padding: 15px; 
+  }
+
+  .contact-form {
+    gap: 10px; 
+  }
+
+  .submit-button {
+    width: 100%; 
+  }
+}
+
+/* For iPad Mini (768px width) */
+@media (max-width: 768px) {
+  .contact-container {
+    width: 85%; 
+    padding: 20px; 
+  }
+
+  .contact-form {
+    gap: 12px; 
+  }
+
+  .submit-button {
+    width: 100%; 
+  }
+}

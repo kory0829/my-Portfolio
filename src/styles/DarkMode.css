@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  button {
+    margin: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button.dark-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  button.dark-mode.dark {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  

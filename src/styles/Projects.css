@@ -1,0 +1,87 @@
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0 auto;
+  transform: translateY(-50px); 
+  opacity: 0; 
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+
+.projects-container.visible {
+  transform: translateY(0); 
+  opacity: 1; 
+}
+
+/* Projects Card */
+.projects-card {
+  margin: 20px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px); 
+  opacity: 0; 
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.projects-container.visible .projects-card {
+  transform: translateY(0); 
+  opacity: 1; 
+}
+
+/* Cascading Effect */
+.projects-card:nth-child(n) {
+  transition-delay: calc(var(--n) * 0.2s);
+}
+
+/* Card Image */
+.projects-card img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Card Title */
+.projects-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Media Queries */
+
+/* iPad Mini (768px and below) */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 1.5rem;
+  }
+
+  .projects-card {
+    width: 48%; 
+  }
+
+  .projects-card h2 {
+    font-size: 16px;
+  }
+}
+
+/* Mobile (iPhone XR - 414px and below) */
+@media (max-width: 414px) {
+  .projects-container {
+    padding: 1rem;
+  }
+
+  .projects-card {
+    width: 90%; 
+  }
+
+  .projects-card h2 {
+    font-size: 14px; 
+  }
+}

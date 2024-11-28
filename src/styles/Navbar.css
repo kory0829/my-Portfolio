@@ -1,0 +1,85 @@
+   .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem; 
+    padding: 1rem;
+    width: 100%; 
+    position: relative; 
+    }
+  
+  /* Links */
+  .links {
+    display: flex;
+    gap: 2rem; 
+  }
+  
+  .links a {
+    margin-top: 50px;
+    color: rgba(82, 101, 182, 0.788);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .links a:hover {
+    color: #f0a500; 
+  }
+  
+  /* Theme toggle button */
+  .theme-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .theme-toggle:hover {
+    color: #f0a500; 
+  }
+  
+  /* Media Queries */
+  
+  /* iPad Mini (768px and below) */
+  @media (max-width: 768px) {
+    .navbar {
+      display: flex;
+      flex-direction: row; 
+      gap: 1rem; 
+      padding-top: 2rem;
+    }
+  
+    .links {
+      flex-direction: row; 
+      align-items: center; 
+    }
+  
+    .links a {
+      font-size: 1rem; 
+    }
+  
+    .theme-toggle {
+      font-size: 1.5rem; 
+    }
+  }
+  
+  /* Mobile (iPhone XR - 414px and below) */
+  @media (max-width: 414px) {
+    .navbar {
+      flex-direction: row; 
+      gap: 1rem; 
+      padding: 1rem;
+    }
+  
+    .links a {
+      font-size: 0.9rem; 
+    }
+  
+    .theme-toggle {
+      font-size: 1.4rem; 
+    }
+  }
+  
